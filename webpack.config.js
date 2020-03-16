@@ -14,7 +14,16 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Smart World'
+            template: PATHS.source + '/index.pug',
         })
-    ]
+    ],
+    module: {
+        rules: [{
+            test: /\.pug$/,
+            loader: 'pug-loader',
+            options: {
+                pretty: true
+            }
+        }]
+    }
 };
