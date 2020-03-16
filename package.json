@@ -2,5 +2,11 @@
   "name": "smartWorld",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "scripts": {
+    "start": "webpack"
+    },
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.42.0"
+  }
 }
