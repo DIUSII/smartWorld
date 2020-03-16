@@ -6,15 +6,46 @@ const PATHS = {
     build: path.join(__dirname, 'dist')
 };
  
+// module.exports = {
+//     entry: PATHS.source + '/index.js',
+//     output: {
+//         path: PATHS.build,
+//         filename: '[name].js'
+//     },
+//     plugins: [
+//         new HtmlWebpackPlugin({
+//             template: PATHS.source + '/index.pug',
+//         })
+//     ],
+//     module: {
+//         rules: [{
+//             test: /\.pug$/,
+//             loader: 'pug-loader',
+//             options: {
+//                 pretty: true
+//             }
+//         }]
+//     }
+// };
 module.exports = {
-    entry: PATHS.source + '/index.js',
+    entry: {
+        'faqPage': PATHS.source + '/pages/faqPage/faqPage.js',
+        'homePage': PATHS.source + '/pages/homePage/homePage.js'
+    },
     output: {
         path: PATHS.build,
-        filename: '[name].js'
+        filename: './js/[name].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: PATHS.source + '/index.pug',
+            filename: 'pages/faqPage.html',
+            chunks: ['faqPage'],
+            template: PATHS.source + '/pages/faqPage/faqPage.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            chunks: ['homePage'],
+            template: PATHS.source + '/pages/homePage/index.pug'
         })
     ],
     module: {
@@ -25,5 +56,8 @@ module.exports = {
                 pretty: true
             }
         }]
+    },
+    devServer: {
+        stats: 'errors-only'
     }
 };
