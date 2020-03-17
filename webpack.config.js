@@ -27,7 +27,7 @@ const PATHS = {
 //         }]
 //     }
 // };
-module.exports = {
+const common = {
     entry: {
         'faqPage': PATHS.source + '/pages/faqPage/faqPage.js',
         'homePage': PATHS.source + '/pages/homePage/homePage.js'
@@ -56,8 +56,23 @@ module.exports = {
                 pretty: true
             }
         }]
-    },
+    }
+};
+const developmentConfig = {
     devServer: {
-        stats: 'errors-only'
+        // stats: 'errors-only',
+        port: 9000
+    }
+};
+module.exports = function(env) {
+    if (env === 'production') {
+        return common;
+    }
+    if (env === 'development') {
+        return Object.assign(
+            {},
+            common,
+            developmentConfig
+        );
     }
 };
