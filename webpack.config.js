@@ -5,6 +5,7 @@ const pug = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
 const extractCSS = require('./webpack/css.extract');
+const images = require('./webpack/images');
  
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -42,6 +43,7 @@ const common = merge([
         }
     },
     pug(),
+    images()
     // sass()
 ]);
 module.exports = function(env) {
