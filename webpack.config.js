@@ -15,15 +15,19 @@ const common = merge([
     {
         entry: {
             'faqPage': PATHS.source + '/pages/faqPage/faqPage.js',
-            'homePage': PATHS.source + '/pages/homePage/homePage.js'
+            'homePage': PATHS.source + '/pages/homePage/homePage.js',
+            'rightSidebarBlog': PATHS.source + '/pages/rightSidebarBlog/rightSidebarBlog.js',
+            'rightSidebarBlogDetails': PATHS.source + '/pages/rightSidebarBlogDetails/rightSidebarBlogDetails.js',
+            'signIn': PATHS.source + '/pages/signIn/signIn.js',
+            'signUp': PATHS.source + '/pages/signUp/signUp.js'
         },
         output: {
             path: PATHS.build,
-            filename: './js/[name].js'
+            filename: './js/[name]/[name].js'
         },
         plugins: [
             new HtmlWebpackPlugin({
-                filename: 'pages/faqPage.html',
+                filename: 'pages/faqPage/faqPage.html',
                 chunks: ['faqPage'],
                 template: PATHS.source + '/pages/faqPage/faqPage.pug'
             }),
@@ -31,6 +35,26 @@ const common = merge([
                 filename: 'index.html',
                 chunks: ['homePage'],
                 template: PATHS.source + '/pages/homePage/index.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'pages/rightSidebarBlog/rightSidebarBlog.html',
+                chunks: ['homePage'],
+                template: PATHS.source + '/pages/rightSidebarBlog/rightSidebarBlog.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'pages/rightSidebarBlogDetails/rightSidebarBlogDetails.html',
+                chunks: ['homePage'],
+                template: PATHS.source + '/pages/rightSidebarBlogDetails/rightSidebarBlogDetails.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'pages/signIn/signIn.html',
+                chunks: ['homePage'],
+                template: PATHS.source + '/pages/signIn/signIn.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'pages/signUp/signUp.html',
+                chunks: ['homePage'],
+                template: PATHS.source + '/pages/signUp/signUp.pug'
             })
             
         ],
