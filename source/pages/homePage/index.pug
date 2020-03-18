@@ -1,6 +1,24 @@
-extends ../base
-block title
-    | Index page
-block main
-    h1 page index-pug
-    a(href="pages/faqPage.html") asdfsdf
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title homePage
+        link(rel="stylesheet", href="../fonts/fonts.css")
+    body
+        header
+            .nav-bar.flex-container
+                .nav-bar__logo
+                    <span class = "nav-bar__span">AppSon</span>
+                .nav-bar__menu-and-button.flex-container
+                    ul.nav-bar__menu
+                        li.nav-bar__items
+                            a(href="#").nav-bar__item home
+                        li.nav-bar__items
+                            a(href="#").nav-bar__item features
+                        li.nav-bar__items
+                            a(href="#").nav-bar__item pricing
+                        li.nav-bar__items
+                            a(href="#").nav-bar__item pages
+                    button.nav-bar__btn sign up
+

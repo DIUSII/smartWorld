@@ -68,7 +68,6 @@ const common = merge([
     },
     pug(),
     images()
-    // sass()
 ]);
 module.exports = function(env) {
     if (env === 'production') {
@@ -80,7 +79,8 @@ module.exports = function(env) {
     if (env === 'development') {
         return merge([
             common,
-            devserver()
+            devserver(),
+            sass(),
         ]);
     }
 };
