@@ -31,7 +31,15 @@ const common = merge([
                 chunks: ['homePage'],
                 template: PATHS.source + '/pages/homePage/index.pug'
             })
-        ]
+            
+        ],
+        optimization: {
+            splitChunks: {
+              chunks: "all",
+              minSize: 1,
+              minChunks: 2
+            }
+        }
     },
     pug(),
     // sass()
