@@ -75,7 +75,7 @@ body{
         padding: 10px 52px;
     }
 }
-.fish{
+.elements{
     text-align: center;
     &__title{
         margin: 106px 0 32px;
@@ -141,5 +141,53 @@ body{
         font-family: $font;
         line-height: 1.69;
         color: #929292;
+    }
+}
+.about{
+    max-width: 1370px;
+    margin: 0 auto;
+    &__img-and-text{
+        margin-right: 70px
+    }
+    &__title{
+        font-family:  $font;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.13;
+        color: #333333;
+        &_padding-2{
+            margin-top: 144px;
+        }
+        &_padding-1{
+            margin-top: 226px;
+        }
+    }
+    &__img{
+        display: block;
+    }
+    &__text{
+        font-family: Quicksand;
+        line-height: 1.69;
+        color: #929292;
+        max-width: 544px;
+    }
+    &__span{
+    }
+    &__link{
+        display: block;
+        font-family: $font;
+        font-weight: 500;
+        line-height: 1.69;
+        color: #0f7bff;
+        text-decoration: none;
+        &_padding-1{
+            margin-bottom: 144px;
+        }
+        &_padding-2{
+            margin-bottom: 226px;
+        }
+    }
+    &__block{
+        flex-wrap: wrap;
     }
 }
