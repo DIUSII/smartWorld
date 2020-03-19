@@ -1,21 +1,50 @@
+@import '../../components/fonts-and-color';
 body{
-    margin: 0;
-    padding: 0;
+    margin: 0 ;
+    padding: 0 ;
+}
+.standart-title{
+    display: none;
+}
+.fixed-container{
+    max-width: 1068px;
+    margin: 0 auto;
+    // padding: 0 20px;
 }
 .flex-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.blue-btn{
+    border: none;
+    font-family: $font;
+    font-weight: bold;
+    line-height: 1.69;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 25px;
+    background-color: #0063dd;
+    outline: none;
+}
+.white-btn{
+    font-family: $font;
+    line-height: 1.69;
+    color: #0f7bff;
+    font-weight: bold;
+    border-radius: 25px;
+    border: solid 2px #0f7bff;
+    background-color: #FFF;
+    outline: none;
+}
 .nav-bar{
     max-width: 1640px;
     margin: 0 auto;
     &__span{
-        font-family: "Quicksand";
+        font-family: $font;
         display: inline-block;
         padding: 33px 24px;
         background-color: #0f7bff;
-        box-shadow: 0 0 85px 0 rgba(127, 127, 127, 0.41);
         font-size: 36px;
         line-height: 0.67;
         font-weight: bold;
@@ -34,7 +63,7 @@ body{
     }
     &__item{
         text-decoration: none;
-        font-family: Quicksand;
+        font-family: $font;
         color: #929292;
         font-weight: 500;
         line-height: 1.69;
@@ -43,15 +72,74 @@ body{
         outline: none;
     }
     &__btn{
-        border: none;
-        font-family: Quicksand;
-        font-weight: bold;
-        line-height: 1.69;
-        color: #FFF;
-        text-transform: uppercase;
         padding: 10px 52px;
-        border-radius: 25px;
-        background-color: #0063dd;
-        outline: none;
+    }
+}
+.fish{
+    text-align: center;
+    &__title{
+        margin: 106px 0 32px;
+        font-family: $font;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 0.67;
+        color: #333333;
+    }
+    &__text{
+        font-family: $font;
+        line-height: 1.69;
+        color: #929292;
+        max-width: 611px;
+        margin: 0 auto 37px;
+    }
+    &__group-button{
+        margin-bottom: 40px;
+    }
+    &__button{
+        &_blue{
+            padding: 10px 30px;
+        }
+        &_white{
+            padding: 10px 30px;
+            margin-left: 30px;
+        }
+    }
+    &__img{
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+.features{
+    background-color: #f5fcfd;
+    text-align: center;
+    padding: 165px 0 130px;
+    &__box{
+        background-color: #FFF;
+        padding: 40px 33px;
+        margin-right: 30px;
+        &_margin{
+            margin-top: 50px;
+        }
+        &_margin-none{
+            margin-right: 0;
+        }
+    }
+    &__img{
+        margin-bottom: 20px;
+    }
+    &__title{
+        margin: 0 0 14px;
+        font-family: $font;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #333333;
+    }
+    &__text{
+        margin: 0;
+        font-family: $font;
+        line-height: 1.69;
+        color: #929292;
     }
 }

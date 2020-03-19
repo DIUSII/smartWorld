@@ -67,7 +67,7 @@ const common = merge([
         }
     },
     pug(),
-    images()
+    images(),
 ]);
 module.exports = function(env) {
     if (env === 'production') {
