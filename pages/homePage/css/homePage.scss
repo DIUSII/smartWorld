@@ -55,8 +55,14 @@ body{
     font-weight: bold;
     border-radius: 25px;
     border: solid 2px #0f7bff;
-    background-color: #FFF;
+    background-color: transparent;
     outline: none;
+}
+.bckg-color{
+    background: url("../images/volna.png") no-repeat ;
+    background-color: #f5fcfd;
+    background-size: cover;
+
 }
 .nav-bar{
     max-width: 1640px;
@@ -126,13 +132,15 @@ body{
     &__img{
         display: block;
         margin: 0 auto;
+        width: 70%;
+        height: auto;
     }
 
 }
 .features{
     background-color: #f5fcfd;
     text-align: center;
-    padding: 165px 0 130px;
+    padding: 165px 0 165px;
     &__box{
         background-color: #FFF;
         padding: 40px 33px;
@@ -273,5 +281,36 @@ body{
             border-bottom-right-radius: 25px;
             border-top-right-radius: 25px;
         }
+    }
+}
+.comments{
+    
+    background-color: #f5fcfd;
+    &__img{
+        margin-right: 127px;
+    }
+    &__title{
+        @include title;
+        margin-bottom: 44px;
+    }
+    &__comment{
+        border-radius: 5px;
+        box-shadow: 0 0 25px 0 rgba(165, 165, 165, 0.1);
+        display: inline-block;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        width: 300px;
+        padding: 40px 30px;
+        background-color: #FFF;
+    }
+    &__sub-title{
+        @include sub-title;
+    }
+    &__text{
+        margin: 0;
+        @include sub-text;
+    }
+    &__sub-text{
+        @include sub-text;
     }
 }
