@@ -1,0 +1,11 @@
+{
+  "name": "smartWorld",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DIUSII/smartWorld.git",
+  "author": "Никита Продиус <nikster.nikster@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pug": "^2.0.4"
+  }
+}

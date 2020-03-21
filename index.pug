@@ -4,7 +4,8 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title homePage
-        link(rel="stylesheet", href="./fonts/fonts.css")
+        link(rel="stylesheet", href="fonts/fonts.css")
+        link(rel="stylesheet", href="pages/homePage/css/homePage.css")
     body
         header
             .nav-bar.flex-container
@@ -27,37 +28,92 @@ html(lang="en")
                 .elements__group-button
                     button.blue-btn.elements__button_blue Download
                     button.white-btn.elements__button_white Free Trial
-                img(src="./images/phone-three.png" alt="three-phone").elements__img
+                img(src="pages/homePage/images/phone-three.png" alt="three-phone").elements__img
         main
             section.features
                 h2.standart-title Standart
                 .fixed-container.flex-container
                     .features__box
-                       img(src="./images/img-features-3.png", alt="img-features").features__img
+                       img(src="pages/homePage/images/img-features-3.png", alt="img-features").features__img
                        h2.features__title Analysis
                        p.features__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                     .features__box.features__box_margin
-                       img(src="./images/img-features-2.png", alt="img-features").features__img
+                       img(src="pages/homePage/images/img-features-2.png", alt="img-features").features__img
                        h2.features__title Clean Design
                        p.features__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                     .features__box.features__box_margin-none
-                       img(src="./images/img-features-1.png", alt="img-features").features__img
+                       img(src="pages/homePage/images/img-features-1.png", alt="img-features").features__img
                        h2.features__title Messaging
                        p.features__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             section.about
                 h2.standart-title Standart
                 .about__block
                     .about__img-and-text.flex-container
-                        img(src="./images/app-screens-1.png", alt="app-screens").about__img
+                        img(src="pages/homePage/images/app-screens-1.png", alt="app-screens").about__img
                         .about__group-text
-                            h2.about__title.about__title_padding-2 Easy Messaging
+                            h2.about__title Easy Messaging
                             p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            a(href="#").about__link.about__link_padding-2 Read More <span class="about__span"></span>
+                            a(href="#").about__link Read More <span class="about__span"></span>
                     .about__img-and-text.flex-container
                         .about__group-text
-                            h2.about__title.about__title_padding-1 Keep In Touch
+                            h2.about__title Keep In Touch
                             p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            a(href="#").about__link.about__link_padding-1 Read More<span class="about__span"></span>
-                        img(src="./images/app-screens-2.png", alt="app-screens").about__img
+                            a(href="#").about__link Read More<span class="about__span"></span>
+                        img(src="pages/homePage/images/app-screens-2.png", alt="app-screens").about__img
+            section.it-works
+                h2.standart-title Standart
+                .fixed-container
+                    h2.it-works__title How Does It Works?
+                    p.it-works__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+                    img(src="pages/homePage/images/blue-pen.png", alt="blue-pen").it-works__img
+                    hr.it-works__hr
+                    img(src="pages/homePage/images/email.png", alt="email").it-works__img
+                    hr.it-works__hr
+                    img(src="pages/homePage/images/tablet.png", alt="tablet").it-works__img
+                    .flex-container
+                        .it-works__sub-text
+                            h2.it-works__sub-title Create An Account
+                            p.it-works__min-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                        .it-works__sub-text
+                            h2.it-works__sub-title Confirm Email
+                            p.it-works__min-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                        .it-works__sub-text
+                            h2.it-works__sub-title See Results
+                            p.it-works__min-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+            section.pricing
+                h2.standart-title Standart 
+                .fixed-container.flex-container
+                    .pricing__main-text  
+                        h2.pricing__title Pricing Plan
+                        p.pricing__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+                        button.pricing__button_blue Montnly
+                        button.pricing__button_white  Yearly
+                    .pricing__block
+                        img(src="pages/homePage/images/pricing-img-1.png", alt="pricing-img-1")
+                        h2.pricing__sub-title Standard
+                        hr
+                        p.pricing__text 2gb Hosting
+                        p.pricing__text 10 Custom Domain
+                        p.pricing__text SSD Hosting
+                        p.pricing__text 50 gb Bandwith
+                        p.pricing__text Free Support
+                        p.pricing__price $19.00
+                        button.blue-btn.pricing__button Try Now
+                    .pricing__block
+                        img(src="pages/homePage/images/pricing-img-2.png", alt="pricing-img-2")
+                        h2.pricing__sub-title Premium
+                        hr
+                        p.pricing__text 2gb Hosting
+                        p.pricing__text 10 Custom Domain
+                        p.pricing__text SSD Hosting
+                        p.pricing__text 50 gb Bandwith
+                        p.pricing__text Free Support
+                        p.pricing__price $49.00
+                        button.white-btn.pricing__button  Try Now
+
+
+
+
+
 
 
