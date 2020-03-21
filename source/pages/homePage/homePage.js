@@ -5,3 +5,5 @@ import img2 from './images/img-features-2.png';
 import img3 from './images/img-features-3.png';
 import img4 from './images/app-screens-1.png';
 import img5 from './images/app-screens-2.png';
+import img6 from './images/about-arrow.png';
+
