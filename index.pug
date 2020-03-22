@@ -7,58 +7,59 @@ html(lang="en")
         link(rel="stylesheet", href="fonts/fonts.css")
         link(rel="stylesheet", href="pages/homePage/css/homePage.css")
     body
-        header
+        header.bckg-color
             .nav-bar.flex-container
                 .nav-bar__logo
                     <span class = "nav-bar__span">AppSon</span>
-                .nav-bar__menu-and-button.flex-container
+                .nav-bar__content.flex-container
                     ul.nav-bar__menu
-                        li.nav-bar__items
-                            a(href="#").nav-bar__item home
-                        li.nav-bar__items
-                            a(href="#").nav-bar__item features
-                        li.nav-bar__items
-                            a(href="#").nav-bar__item pricing
-                        li.nav-bar__items
-                            a(href="#").nav-bar__item pages
+                        li.nav-bar__item
+                            a(href="#").nav-bar__link home
+                        li.nav-bar__item
+                            a(href="#").nav-bar__link features
+                        li.nav-bar__item
+                            a(href="#").nav-bar__link pricing
+                        li.nav-bar__item
+                            a(href="#").nav-bar__link pages
                     button.blue-btn.nav-bar__btn sign up
             .elements.fixed-container
                 h1.elements__title Best-Desktop-App-for-You
                 p.elements__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                .elements__group-button
-                    button.blue-btn.elements__button_blue Download
-                    button.white-btn.elements__button_white Free Trial
+                .elements__group-btn
+                    button.blue-btn.elements__btn_blue Download
+                    button.white-btn.elements__btn_white Free Trial
                 img(src="pages/homePage/images/phone-three.png" alt="three-phone").elements__img
+                button.elements__button-arrow
         main
-            section.features
+            section.features#kak
                 h2.standart-title Standart
                 .fixed-container.flex-container
-                    .features__box
+                    .features__content
                        img(src="pages/homePage/images/img-features-3.png", alt="img-features").features__img
-                       h2.features__title Analysis
+                       h3.features__title Analysis
                        p.features__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    .features__box.features__box_margin
+                    .features__content.features__content_margin
                        img(src="pages/homePage/images/img-features-2.png", alt="img-features").features__img
-                       h2.features__title Clean Design
+                       h3.features__title Clean Design
                        p.features__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    .features__box.features__box_margin-none
+                    .features__content.features__content_margin-none
                        img(src="pages/homePage/images/img-features-1.png", alt="img-features").features__img
-                       h2.features__title Messaging
+                       h3.features__title Messaging
                        p.features__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             section.about
                 h2.standart-title Standart
-                .about__block
-                    .about__img-and-text.flex-container
+                .about__container
+                    .about__content.flex-container
                         img(src="pages/homePage/images/app-screens-1.png", alt="app-screens").about__img
                         .about__group-text
                             h2.about__title Easy Messaging
                             p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            a(href="#").about__link Read More <span class="about__span"></span>
-                    .about__img-and-text.flex-container
+                            a(data-scroll href="#kak").about__link Read More <span class="about__span"></span>
+                    .about__content.flex-container
                         .about__group-text
                             h2.about__title Keep In Touch
                             p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            a(href="#").about__link Read More<span class="about__span"></span>
+                            a(data-scroll href="#kak").about__link Read More<span class="about__span"></span>
                         img(src="pages/homePage/images/app-screens-2.png", alt="app-screens").about__img
             section.it-works
                 h2.standart-title Standart
@@ -72,18 +73,18 @@ html(lang="en")
                     img(src="pages/homePage/images/tablet.png", alt="tablet").it-works__img
                     .flex-container
                         .it-works__sub-text
-                            h2.it-works__sub-title Create An Account
-                            p.it-works__min-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                            h3.it-works__sub-title Create An Account
+                            p.it-works__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
                         .it-works__sub-text
-                            h2.it-works__sub-title Confirm Email
-                            p.it-works__min-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                            h3.it-works__sub-title Confirm Email
+                            p.it-works__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
                         .it-works__sub-text
-                            h2.it-works__sub-title See Results
-                            p.it-works__min-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                            h3.it-works__sub-title See Results
+                            p.it-works__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
             section.pricing
                 h2.standart-title Standart 
                 .fixed-container.flex-container
-                    .pricing__main-text  
+                    .pricing__content 
                         h2.pricing__title Pricing Plan
                         p.pricing__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
                         button.pricing__button_blue Montnly
@@ -110,6 +111,89 @@ html(lang="en")
                         p.pricing__text Free Support
                         p.pricing__price $49.00
                         button.white-btn.pricing__button  Try Now
+            section.comments
+                h2.standart-title Standart 
+                .flex-container
+                    img(src="pages/homePage/images/img-comments.png", alt="img-comments").comments__img
+                    .comments__container
+                        h2.comments__title Trusted By More Than 55M Peoples
+                        .comments__content
+                            .comments__box.flex-container
+                                h3.comments__sub-title Raisa Moni
+                                img(src="pages/homePage/images/twitter.png", alt="twitter")
+                            p.comments__text Envato Customer
+                            p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
+                        .comments__content
+                            .comments__box.flex-container
+                                h3.comments__sub-title Raisa Moni
+                                img(src="pages/homePage/images/twitter.png", alt="twitter")
+                            p.comments__text Envato Customer
+                            p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
+                        .comments__content
+                            .comments__box.flex-container
+                                h3.comments__sub-title Raisa Moni
+                                img(src="pages/homePage/images/twitter.png", alt="twitter")
+                            p.comments__text Envato Customer
+                            p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
+            section.latest-news
+                h2.standart-title Standart
+                .fixed-container    
+                    h2.latest-news__title Latest News From Us
+                    p.latest-news__text.latest-news__text_center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
+                    .latest-news__container.flex-container 
+                        .latest-news__main-news
+                            img(src="pages/homePage/images/img-main-news.jpg", alt="img-main-news")
+                            h3.latest-news__sub-title The master bedroom suite is phenomenally spacious
+                            p.latest-news__text.latest-news__text_width Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                            a(href="#").latest-news__link Continue Reading<span class="latest-news__span"></span>
+                        .latest-news__items-news
+                            .latest-news__item-news.flex-container 
+                                img(src="pages/homePage/images/img-group-news-1.jpg", alt="img-group-news-1").latest-news__group-img
+                                .latest-news__group-text
+                                    h3.latest-news__item-title The master bedroom suite is phenomey spacious
+                                    p.latest-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                            .latest-news__item-news.flex-container 
+                                img(src="pages/homePage/images/img-group-news-2.jpg", alt="img-group-news-2").latest-news__group-img
+                                .latest-news__group-text
+                                    h3.latest-news__item-title The master bedroom suite is phenomey spacious
+                                    p.latest-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                            .latest-news__item-news.flex-container 
+                                img(src="pages/homePage/images/img-group-news-3.jpg", alt="img-group-news-3").latest-news__group-img
+                                .latest-news__group-text
+                                    h3.latest-news__item-title The master bedroom suite is phenomey spacious
+                                    p.latest-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+            section.free-trial
+                h2.standart-title Standart
+                .free-trial__block.fixed-container.flex-container
+                    .free-trial__text
+                        h2.free-trial__title Try 30 Days Free Trial
+                        p.free-trial__sub-title No credit card required
+                    button.free-trial__button Get Started<span class="free-trial__span"></span>
+        footer
+            section.subscribe
+                h2.standart-title Standart
+                .subscribe__logo
+                    <span class = "subscribe__span">AppSon</span>
+                    input(type="text")
+            section.copyright
+                h2.standart-title Standart
+                .flex-container
+                    .flex-container
+                        .copyright__text.copyright__text_margin © 2018 Copyright, All Rights Reserved by AppSon
+                        .flex-container
+                            .copyright__text.copyright__text_hover Terms & Condition         
+                            .copyright__text.copyright__text_hover Privacy Policy         
+                            .copyright__text.copyright__text_padding Help
+                        .flex-container
+                            img(src="pages/homePage/images/fb-footer.png", alt="fb-footer").copyright__img
+                            img(src="pages/homePage/images/twitter-footer.png", alt="twitter-footer").copyright__img
+                            img(src="pages/homePage/images/yt-footer.png", alt="yt-footer").copyright__img
+                    img(src="pages/homePage/images/footer-arrow.png", alt="footer-arrow").copyright__img-arrow
+        script(src="pages/components/smooth-scroll.polyfills.min.js")
+        script(src="pages/homePage/js/homePage.js")
+        <script>
+            var scroll = new SmoothScroll('a[href*="#kak"]');
+        </script>
 
 
 

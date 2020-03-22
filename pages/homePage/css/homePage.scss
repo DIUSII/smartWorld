@@ -47,6 +47,7 @@ body{
     border-radius: 25px;
     background-color: #0063dd;
     outline: none;
+    cursor: pointer;
 }
 .white-btn{
     font-family: $font;
@@ -57,6 +58,7 @@ body{
     border: solid 2px #0f7bff;
     background-color: transparent;
     outline: none;
+    cursor: pointer;
 }
 .bckg-color{
     background: url("../images/volna.png") no-repeat ;
@@ -84,11 +86,11 @@ body{
         margin: 0;
         padding:0;
     }
-    &__items{
+    &__item{
         display: inline-block;
         vertical-align: middle;
     }
-    &__item{
+    &__link{
         text-decoration: none;
         font-family: $font;
         color: #929292;
@@ -97,12 +99,19 @@ body{
         text-transform: uppercase;
         margin-right: 30px;
         outline: none;
+        transition: 1s;
+        &:hover{
+            color:#0f7bff;
+        }
     }
+
     &__btn{
         padding: 10px 52px;
+        margin-left: 30px;
     }
 }
 .elements{
+    position: relative;
     text-align: center;
     &__title{
         margin: 106px 0 32px;
@@ -117,10 +126,10 @@ body{
         max-width: 611px;
         margin: 0 auto 37px;
     }
-    &__group-button{
+    &__group-btn{
         margin-bottom: 40px;
     }
-    &__button{
+    &__btn{
         &_blue{
             padding: 10px 30px;
         }
@@ -135,13 +144,27 @@ body{
         width: 70%;
         height: auto;
     }
+    &__button-arrow{
+        position: absolute;
+        background: url("../images/elements-arrow.png") no-repeat center center;
+        width:25px;
+        top: 97%;
+        left: 48%;
+        height: 37px;
+        padding: 26px;
+        background-color: #FFF;
+        border: 1px solid #dcdcdc;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+    }
 
 }
 .features{
     background-color: #f5fcfd;
     text-align: center;
     padding: 165px 0 165px;
-    &__box{
+    &__content{
         background-color: #FFF;
         padding: 40px 33px;
         margin-right: 30px;
@@ -200,6 +223,9 @@ body{
     padding: 151px 127px;
     &__title{
         @include title;
+        background: url("../images/two-line.png") no-repeat center center;
+        margin:0;
+        padding:30px 0;
     }
     &__text{
         @include sub-text;
@@ -219,23 +245,15 @@ body{
     &__sub-title{
         @include sub-title;
     }
-    &__min-text{
+    &__txt{
         @include sub-text;
         
     }
 }
 .pricing{
     padding: 90px 0;
-    &__main-text{
-        width: 213px;
-
-    }
-    &__price{
-        font-family: $font;
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 1.13;
-        color: #0f7bff;
+    &__content{
+        width: 300px;
     }
     &__title{
         @include title;
@@ -243,17 +261,21 @@ body{
     &__text{
         @include sub-text;
     }
-    &__sub-title{
-        @include sub-title;
-    }
     &__block{
         padding: 40px 98px;
         text-align: center;
         border-radius: 5px;
         box-shadow: 0 0 68px 0 rgba(165, 165, 165, 0.25);
     }
-    &__main-text{
-        width: 300px;
+    &__sub-title{
+        @include sub-title;
+    }
+    &__price{
+        font-family: $font;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.13;
+        color: #0f7bff;
     }
     &__button{
         padding: 10px 40px;
@@ -268,6 +290,7 @@ body{
             background-color: #0f7bff;
             border-bottom-left-radius: 25px;
             border-top-left-radius: 25px;
+            cursor: pointer;
         }
         &_white{
             outline: 0;
@@ -280,20 +303,20 @@ body{
             color: #0f7bff;
             border-bottom-right-radius: 25px;
             border-top-right-radius: 25px;
+            cursor: pointer;
         }
     }
 }
 .comments{
-    
     background-color: #f5fcfd;
     &__img{
-        margin-right: 127px;
+        margin-right: 30px;
     }
     &__title{
         @include title;
         margin-bottom: 44px;
     }
-    &__comment{
+    &__content{
         border-radius: 5px;
         box-shadow: 0 0 25px 0 rgba(165, 165, 165, 0.1);
         display: inline-block;
@@ -312,5 +335,155 @@ body{
     }
     &__sub-text{
         @include sub-text;
+    }
+}
+.latest-news{
+    padding: 130px 0;
+    &__title{
+        text-align: center;
+        @include title;
+        background: url("../images/two-line.png") no-repeat center center;
+        margin:0;
+        padding:30px 0;
+    }
+    &__sub-title{
+        font-family: $font;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #0f7bff;
+    }
+    &__text{
+        // display: inline-block;
+        margin-bottom: 0;
+        @include sub-text;
+        &_center{
+            text-align: center;
+            margin-bottom: 47px;
+        }
+        &_width{
+            max-width: 524px;
+        }
+    }
+    &__container{
+        align-items: flex-start;
+    }
+    &__main-news{
+        margin-right: 15px;
+    }
+    &__group-img{
+        margin-right: 15px;
+    }
+    &__item-title{
+        margin: 0;
+    }
+    &__item-news{
+        margin-bottom: 30px;
+    }
+    &__span{
+        display: inline-block;
+        background: url("../images/about-arrow.png") no-repeat 100% 50%;
+        width: 16px;
+        height: 12px;
+        margin-left: 10px;
+    }
+    &__link{
+        display: block;
+        margin-top: 37px;
+        font-family: $font;
+        font-weight: 500;
+        line-height: 1.69;
+        color: #0f7bff;
+        text-decoration: none;
+    }
+}
+.free-trial{
+    padding: 134px 0;
+    background-color: #f5fcfd;
+    &__title{
+        @include title;
+    }
+    &__sub-title{
+        @include sub-text;
+    }
+    &__block{
+        justify-content: space-around;
+    }
+    &__button{
+        border: 0;
+        outline: none;
+        border-radius: 5px;
+        background-color: #0f7bff;
+        font-weight: bold;
+        padding: 32px 72px;
+        font-family: $font;
+        line-height: 1.69;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    &__span{
+        display: inline-block;
+        background: url("../images/white-arrow.png") no-repeat 100% 50%;
+        width: 16px;
+        height: 12px;
+        margin-left: 10px;
+    }
+}
+.subscribe{
+    background-color: #0f7bff;
+    padding: 130px 0;
+    text-align: center;
+    border-bottom: 1px solid #FFF;
+    &__span{
+        font-family: $font;
+        display: block;
+        padding: 33px 24px;
+        font-size: 36px;
+        line-height: 0.67;
+        font-weight: bold;
+        color: #feffff;
+    }
+
+}
+.copyright{
+    background-color: #0f7bff;
+    padding: 27px 0;
+    padding-left: 15%;
+    &__text{
+        @include sub-text;
+        margin-right: 30px;
+        &_margin{
+            margin-right: 240px;
+            color: #FFF;
+        }
+        &_padding{
+            margin-right: 120px;
+            transition: 1s;
+            &:hover{
+                color: #FFF;
+            }
+        }
+        &_hover{
+            transition: 1s;
+            &:hover{
+                color: #FFF;
+            }
+        }
+    }
+    &__img{
+        margin-right: 15px;
+        opacity: 0.5;
+        transition: 1s;
+        &:hover{
+            opacity: 1;
+        }
+        
+    }
+    &__img-arrow{
+        background-color: #fff;
+        padding: 10px 14px;
+        display: inline-block;
+        margin-right: 10%;
+        cursor: pointer;
     }
 }
