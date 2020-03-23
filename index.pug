@@ -7,7 +7,7 @@ html(lang="en")
         link(rel="stylesheet", href="fonts/fonts.css")
         link(rel="stylesheet", href="pages/homePage/css/homePage.css")
     body
-        header.bckg-color
+        header.bckg-color#home
             .nav-bar.flex-container
                 .nav-bar__logo
                     <span class = "nav-bar__span">AppSon</span>
@@ -16,12 +16,12 @@ html(lang="en")
                         li.nav-bar__item
                             a(href="#").nav-bar__link home
                         li.nav-bar__item
-                            a(href="#").nav-bar__link features
+                            a(href="#feat").nav-bar__link features
                         li.nav-bar__item
-                            a(href="#").nav-bar__link pricing
+                            a(href="#pric").nav-bar__link pricing
                         li.nav-bar__item
                             a(href="#").nav-bar__link pages
-                    button.blue-btn.nav-bar__btn sign up
+                    button.blue-btn.nav-bar__btn(onClick='location.href="pages/signUp/signUp.html"') sign up
             .elements.fixed-container
                 h1.elements__title Best-Desktop-App-for-You
                 p.elements__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -29,9 +29,9 @@ html(lang="en")
                     button.blue-btn.elements__btn_blue Download
                     button.white-btn.elements__btn_white Free Trial
                 img(src="pages/homePage/images/phone-three.png" alt="three-phone").elements__img
-                button.elements__button-arrow
+                a(href="#foot").elements__button-arrow
         main
-            section.features#kak
+            section.features#feat
                 h2.standart-title Standart
                 .fixed-container.flex-container
                     .features__content
@@ -54,12 +54,12 @@ html(lang="en")
                         .about__group-text
                             h2.about__title Easy Messaging
                             p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            a(data-scroll href="#kak").about__link Read More <span class="about__span"></span>
+                            a( href="#kak").about__link Read More <span class="about__span"></span>
                     .about__content.flex-container
                         .about__group-text
                             h2.about__title Keep In Touch
                             p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            a(data-scroll href="#kak").about__link Read More<span class="about__span"></span>
+                            a( href="#kak").about__link Read More<span class="about__span"></span>
                         img(src="pages/homePage/images/app-screens-2.png", alt="app-screens").about__img
             section.it-works
                 h2.standart-title Standart
@@ -81,7 +81,7 @@ html(lang="en")
                         .it-works__sub-text
                             h3.it-works__sub-title See Results
                             p.it-works__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
-            section.pricing
+            section.pricing#pric
                 h2.standart-title Standart 
                 .fixed-container.flex-container
                     .pricing__content 
@@ -169,12 +169,13 @@ html(lang="en")
                         h2.free-trial__title Try 30 Days Free Trial
                         p.free-trial__sub-title No credit card required
                     button.free-trial__button Get Started<span class="free-trial__span"></span>
-        footer
+        footer#foot
             section.subscribe
                 h2.standart-title Standart
                 .subscribe__logo
                     <span class = "subscribe__span">AppSon</span>
-                    input(type="text")
+                    <input type="email" name="" class="subscribe__input-email" placeholder="Enter Your Email">
+                    <input type="submit" value="SUBSCRIBE" class="subscribe__input-btn">
             section.copyright
                 h2.standart-title Standart
                 .flex-container
@@ -188,12 +189,10 @@ html(lang="en")
                             img(src="pages/homePage/images/fb-footer.png", alt="fb-footer").copyright__img
                             img(src="pages/homePage/images/twitter-footer.png", alt="twitter-footer").copyright__img
                             img(src="pages/homePage/images/yt-footer.png", alt="yt-footer").copyright__img
-                    img(src="pages/homePage/images/footer-arrow.png", alt="footer-arrow").copyright__img-arrow
-        script(src="pages/components/smooth-scroll.polyfills.min.js")
+                    a(href="#home").copyright__img-arrow
+        script(src="pages/components/jquery-3.4.1.min.js")
         script(src="pages/homePage/js/homePage.js")
-        <script>
-            var scroll = new SmoothScroll('a[href*="#kak"]');
-        </script>
+
 
 
 

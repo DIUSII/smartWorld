@@ -1,0 +1,237 @@
+@import '../../components/fonts-and-color';
+@import '../../components/blocks/blocks.scss';
+.bckg-color{
+    background-color: #f5fcfd;
+}
+.standart{
+    display: none;
+}
+.nav-bar{
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0 20px;
+    &__span{
+        font-family: $font;
+        margin: 33px 0;
+        display: inline-block;
+        font-size: 36px;
+        line-height: 0.67;
+        font-weight: bold;
+        color: #0f7bff;
+    }
+    &__menu{
+        list-style: none;
+        margin: 0;
+        padding:0;
+    }
+    &__item{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__link{
+        text-decoration: none;
+        font-family: $font;
+        color: #929292;
+        font-weight: 500;
+        line-height: 1.69;
+        text-transform: uppercase;
+        margin-right: 30px;
+        outline: none;
+        transition: 1s;
+        &:hover{
+            color:#0f7bff;
+        }
+    }
+
+    &__btn{
+        padding: 10px 52px;
+        margin-left: 30px;
+    }
+}
+.sign-in{
+    text-align: center;
+    padding: 130px;
+    &__title{
+        @include title;
+    }
+    &__text{
+        @include sub-text;
+        &_padding{
+            margin-bottom: 47px;
+        }
+    }
+    &__btn-fb{
+        font-family:$font;
+        font-weight: bold;
+        line-height: 1.69;
+        color: #ffffff;
+        border: 0;
+        border-radius: 5px;
+        background-color: #3b5999;
+        padding: 10px 36px;
+    }
+    &__btn-twitter{
+        margin-left: 30px;
+        font-family:$font;
+        font-weight: bold;
+        line-height: 1.69;
+        color: #ffffff;
+        border: 0;
+        border-radius: 5px;
+        background-color: #55acee;;
+        padding: 10px 47px;
+    }
+    &__sub-title{
+        @include sub-title;
+        margin: 50px 0;
+    }
+    &__input{
+        display:block;
+        width: 300px;
+        border-radius: 5px;
+        border: solid 1px #dcdcdc;
+        padding: 15px 0 15px 20px;
+        margin: 0 auto 30px;
+        outline: none;
+        @include sub-text;
+        &::placeholder{
+            @include sub-text;
+        }
+    }
+    &__link{
+        font-family: $font;
+        font-size: 12px;
+        line-height: 2.25;
+        color: #0f7bff;
+        text-decoration: none;
+    }
+    &__btn{
+        margin-top: 30px;
+        padding: 10px 37px;
+        
+    }
+    &__box{
+     width: 310px;
+     margin: 0 auto;
+    }
+}
+.all-info{
+    background-color:#f5fcfd;
+    padding: 130px 0;
+    border-bottom: 1px solid #FFF;
+    &__container{
+        align-items: flex-start;
+    }
+    &__logo{
+        font-family: $font;
+        margin:0;
+        display: inline-block;
+        font-size: 36px;
+        line-height: 0.67;
+        font-weight: bold;
+        color: #0f7bff;
+    }
+    &__fb{
+        display: inline-block;
+        background: url("../../components/images/fb-footer.png") no-repeat center center;
+        width: 10px;
+        height: 20px;
+        transition: 1s;
+        opacity: 0.3;
+        margin-right: 20px;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__twitter{
+        display: inline-block;
+        background: url("../../components/images/twitter-footer.png") no-repeat center center;
+        width: 18px;
+        height: 16px;
+        transition: 1s;
+        opacity: 0.3;
+        margin-right: 20px;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__yt{
+        display: inline-block;
+        background: url("../../components/images/yt-footer.png") no-repeat center center;
+        width: 19px;
+        height: 14px;
+        transition: 1s;
+        opacity: 0.3;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__text{
+        @include sub-text;
+        width: 400px;
+        margin-top: 33px;
+    }
+    &__sub-title{
+        margin-top:0;
+        @include sub-title;
+        margin-bottom: 30px;
+    }
+    &__items{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &__item{
+        margin-bottom: 10px;
+    }
+    &__link{
+        text-decoration: none;
+        @include sub-text;
+        transition: 1s;
+        &:hover{
+            color: #0f7bff;
+        }
+    }
+}
+.coperyght{
+    position: relative;
+    background-color:#f5fcfd;
+    padding:41px 0;
+    &__text{
+        margin-right: 19%;
+        @include sub-text;
+    }
+    &__items{
+        margin:0;
+        padding: 0;
+        list-style: none;
+    }
+    &__item{
+        margin-right: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        &_padding{
+            margin-right: 0;
+        }
+    }
+    &__link{
+        @include sub-text;
+        text-decoration: none;
+        transition: 1s;
+        &:hover{
+            color: #0f7bff;
+        }
+
+    }
+    &__footer-arrow{
+        width: 18px;
+        height: 24px;
+        padding: 7px 10px;
+        background: url("../../components/images/arrow-footer.png") no-repeat center center;
+        border-radius: 3px;
+        background-color: #0f7bff;
+        position: absolute;
+        top: 32.5%;
+        right:10%;
+    }
+}

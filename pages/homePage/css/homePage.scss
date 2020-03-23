@@ -1,65 +1,5 @@
 @import '../../components/fonts-and-color';
-@import '../../components/mixin.scss';
-body{
-    margin: 0 ;
-    padding: 0 ;
-}
-@mixin title{
-    font-family:  $font;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1.13;
-    color: #333333;
-}
-@mixin sub-title{
-    font-family: $font;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: #333333;
-}
-
-@mixin sub-text{
-    font-family: $font;
-    line-height: 1.69;
-    color: #929292;
-}
-
-.standart-title{
-    display: none;
-}
-.fixed-container{
-    max-width: 1068px;
-    margin: 0 auto;
-}
-.flex-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.blue-btn{
-    border: none;
-    font-family: $font;
-    font-weight: bold;
-    line-height: 1.69;
-    color: #FFF;
-    text-transform: uppercase;
-    border-radius: 25px;
-    background-color: #0063dd;
-    outline: none;
-    cursor: pointer;
-}
-.white-btn{
-    font-family: $font;
-    line-height: 1.69;
-    color: #0f7bff;
-    font-weight: bold;
-    border-radius: 25px;
-    border: solid 2px #0f7bff;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-}
+@import '../../components/blocks/blocks.scss';
 .bckg-color{
     background: url("../images/volna.png") no-repeat ;
     background-color: #f5fcfd;
@@ -151,7 +91,7 @@ body{
         top: 97%;
         left: 48%;
         height: 37px;
-        padding: 26px;
+        padding: 13px 20px;
         background-color: #FFF;
         border: 1px solid #dcdcdc;
         border-radius: 50%;
@@ -443,6 +383,35 @@ body{
         font-weight: bold;
         color: #feffff;
     }
+    &__input-email{
+        width: 350px;
+        padding: 15px 0 15px 30px;
+        background-color: transparent;
+        border: 1px solid #FFF;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        line-height: 1.69;
+        outline: none;
+        font-family: $font;
+        color: #FFF;
+        &::placeholder{
+            color: #FFF;
+            font-family: $font;
+        }
+    }
+    &__input-btn{
+        background-color: #FFF;
+        border: none;
+        outline: none;
+        padding: 16px 30px;
+        font-family: $font;
+        font-weight: bold;
+        line-height: 1.69;
+        color: #0f7bff;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        margin-left: -10px;
+    }
 
 }
 .copyright{
@@ -480,9 +449,11 @@ body{
         
     }
     &__img-arrow{
+        background: url('../images/footer-arrow.png') no-repeat center center;
         background-color: #fff;
-        padding: 10px 14px;
+        padding: 20px 20px;
         display: inline-block;
+        border-radius: 3px;
         margin-right: 10%;
         cursor: pointer;
     }

@@ -1,0 +1,60 @@
+body{
+    margin: 0 ;
+    padding: 0 ;
+}
+@mixin title{
+    font-family:  $font;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.13;
+    color: #333333;
+}
+@mixin sub-title{
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333333;
+}
+
+@mixin sub-text{
+    font-family: $font;
+    line-height: 1.69;
+    color: #929292;
+}
+
+.standart-title{
+    display: none;
+}
+.fixed-container{
+    max-width: 1068px;
+    margin: 0 auto;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.blue-btn{
+    border: none;
+    font-family: $font;
+    font-weight: bold;
+    line-height: 1.69;
+    color: #FFF;
+    text-transform: uppercase;
+    border-radius: 25px;
+    background-color: #0063dd;
+    outline: none;
+    cursor: pointer;
+}
+.white-btn{
+    font-family: $font;
+    line-height: 1.69;
+    color: #0f7bff;
+    font-weight: bold;
+    border-radius: 25px;
+    border: solid 2px #0f7bff;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}

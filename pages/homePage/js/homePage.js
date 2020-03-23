@@ -1,4 +1,8 @@
-var scroll = new SmoothScroll('a[href*="#kak"]', {
-	speed: 500,
-	speedAsDuration: true
+$(document).ready(function(){
+    $("body").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
 });
