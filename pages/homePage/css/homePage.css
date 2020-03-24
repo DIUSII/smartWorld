@@ -281,6 +281,17 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 68px 0 rgba(165, 165, 165, 0.25);
 }
+.pricing__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pricing__item {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.69;
+  color: #929292;
+  margin-bottom: 20px;
+}
 .pricing__sub-title {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
@@ -294,6 +305,7 @@ body {
   font-weight: 500;
   line-height: 1.13;
   color: #0f7bff;
+  margin-bottom: 20px;
 }
 .pricing__button {
   padding: 10px 40px;
@@ -521,26 +533,30 @@ body {
 .copyright {
   background-color: #0f7bff;
   padding: 27px 0;
-  padding-left: 15%;
+  position: relative;
 }
 .copyright__text {
   font-family: "Quicksand", sans-serif;
   line-height: 1.69;
   color: #929292;
-  margin-right: 30px;
 }
 .copyright__text_margin {
-  margin-right: 240px;
   color: #FFF;
 }
 .copyright__text_padding {
-  margin-right: 120px;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.69;
+  color: #929292;
   transition: 1s;
 }
 .copyright__text_padding:hover {
   color: #FFF;
 }
 .copyright__text_hover {
+  margin-right: 30px;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.69;
+  color: #929292;
   transition: 1s;
 }
 .copyright__text_hover:hover {
@@ -555,13 +571,20 @@ body {
   opacity: 1;
 }
 .copyright__img-arrow {
+  position: absolute;
   background: url("../images/footer-arrow.png") no-repeat center center;
   background-color: #fff;
   padding: 20px 20px;
-  display: inline-block;
   border-radius: 3px;
   margin-right: 10%;
   cursor: pointer;
+  top: 32.5%;
+  right: 1%;
+}
+.copyright__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*# sourceMappingURL=homePage.css.map */

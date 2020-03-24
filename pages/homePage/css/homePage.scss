@@ -207,6 +207,15 @@
         border-radius: 5px;
         box-shadow: 0 0 68px 0 rgba(165, 165, 165, 0.25);
     }
+    &__items{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &__item{
+        @include sub-text;
+        margin-bottom: 20px;
+    }
     &__sub-title{
         @include sub-title;
     }
@@ -216,6 +225,7 @@
         font-weight: 500;
         line-height: 1.13;
         color: #0f7bff;
+        margin-bottom: 20px;
     }
     &__button{
         padding: 10px 40px;
@@ -416,23 +426,24 @@
 }
 .copyright{
     background-color: #0f7bff;
-    padding: 27px 0;
-    padding-left: 15%;
+    padding: 27px 0;    
+    position: relative;
     &__text{
         @include sub-text;
-        margin-right: 30px;
+        // margin-right: 30px;
         &_margin{
-            margin-right: 240px;
             color: #FFF;
         }
         &_padding{
-            margin-right: 120px;
+            @include sub-text;
             transition: 1s;
             &:hover{
                 color: #FFF;
             }
         }
         &_hover{
+            margin-right: 30px;
+            @include sub-text;
             transition: 1s;
             &:hover{
                 color: #FFF;
@@ -449,12 +460,19 @@
         
     }
     &__img-arrow{
+        position: absolute;
         background: url('../images/footer-arrow.png') no-repeat center center;
         background-color: #fff;
         padding: 20px 20px;
-        display: inline-block;
         border-radius: 3px;
         margin-right: 10%;
         cursor: pointer;
+        top: 32.5%;
+        right:1%;
+    }
+    &__items{
+        margin:0;
+        padding: 0;
+        list-style: none;
     }
 }
