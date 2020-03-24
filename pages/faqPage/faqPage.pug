@@ -1,5 +1,44 @@
-extends ../base
-block title
-    | Blog page
-block main
-    h1 page blog-pug
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="../../fonts/fonts.css")
+        link(rel="stylesheet", href="../faqPage/css/faqPage.css")
+    body
+        include ../components/pug-blocks/nav-bar.pug
+        main
+            include ../components/pug-blocks/cover.pug
+            section.faq
+                h2.standart-title standart
+                .faq__container.fixed-container.flex-container
+                    .faq__blocks
+                        ul.faq__items
+                            li.faq__item Sales
+                            li.faq__item Theme Upload
+                            li.faq__item Upload Requirments
+                            li.faq__item PSD Template
+                            li.faq__item Refund Policy
+                    .faq__answers
+                        .faq__box
+                            h2.faq__title.faq__title_margin How to upload your Theme?
+                            p.faq__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur labore et dolore. 
+                        .faq__box
+                            h2.faq__title Which Files need to upload?
+                            p.faq__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore..
+                        .faq__box
+                            h2.faq__title How many times need to be review?
+                            p.faq__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore..
+                        .faq__box
+                            h2.faq__title How to upload your Theme?
+                            p.faq__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur labore et dolore. 
+                        p.faq__questions  Help This Post?
+                        label(for="yesN0-1").faq__label
+                            input(type="radio" name="yesNo" id="yesN0-1" checked).faq__input
+                            <span>Yes</span>
+                        label(for="yesN0-2").faq__label 
+                            input(type="radio" name="yesNo" id="yesN0-2").faq__input 
+                            <span>No</span>
+                                
+        include ../components/pug-blocks/footer.pug

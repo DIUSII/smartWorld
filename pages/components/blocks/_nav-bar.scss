@@ -1,0 +1,46 @@
+
+.bckg-color{
+    background-color: #f5fcfd;
+}
+.nav-bar{
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0 20px;
+    &__span{
+        font-family: $font;
+        margin: 33px 0;
+        display: inline-block;
+        font-size: 36px;
+        line-height: 0.67;
+        font-weight: bold;
+        color: #0f7bff;
+    }
+    &__menu{
+        list-style: none;
+        margin: 0;
+        padding:0;
+    }
+    &__item{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__link{
+        text-decoration: none;
+        font-family: $font;
+        color: #929292;
+        font-weight: 500;
+        line-height: 1.69;
+        text-transform: uppercase;
+        margin-right: 30px;
+        outline: none;
+        transition: 1s;
+        &:hover{
+            color:#0f7bff;
+        }
+    }
+
+    &__btn{
+        padding: 10px 52px;
+        margin-left: 30px;
+    }
+}
