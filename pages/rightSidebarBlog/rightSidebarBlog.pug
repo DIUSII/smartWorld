@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="../../fonts/fonts.css")
+        link(rel="stylesheet", href="../rightSidebarBlog/css/rightSidebarBlog.css")
+    body
+        include ../components/pug-blocks/nav-bar.pug
+        main
+            include ../components/pug-blocks/cover.pug
+            +text('Latest Info', 'Our Blog Post', 'Home - Right Side Bar Blog')
+            section.posts
+                .posts__container.fixed-container.flex-container
+                    .posts__content
+                        mixin img(img)
+                            .posts__box.flex-container
+                                img(src="images/"+img, alt="img-post-1")
+                                .posts__group-text
+                                    h3.posts__title The master bedroom suite is spaci of 
+                                    .posts__icon.flex-container
+                                        .posts__date 16 June, 2018
+                                        .posts__comment 22
+                                        .posts__likes 36
+                                    p.posts__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    a(href="").posts__link Continue Reading<span class="posts__span"></span>
+                        +img('img-post-1.jpg')
+                        +img('img-post-2.jpg')
+                        +img('img-post-3.png')
+                        +img('img-post-4.jpg')
+                        +img('img-post-5.png')
+                        mixin label(id,text)
+                            label(for="yesN0-"+id).posts__label
+                                input(type="radio" name="yesNo", id="yesN0-"+id).posts__input
+                                span.posts__label-span= text
+                        .posts__cont
+                            +label(1,1)
+                            +label(2,2)
+                            +label(3,3)
+                            +label(4,4)
+                            +label(5,'>')
+                    aside.posts__side-colomn
+                        input(type="search")
+
+        include ../components/pug-blocks/footer.pug

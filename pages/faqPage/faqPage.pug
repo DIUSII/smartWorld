@@ -10,6 +10,7 @@ html(lang="en")
         include ../components/pug-blocks/nav-bar.pug
         main
             include ../components/pug-blocks/cover.pug
+            +text('Latest Info', 'frequently Ask question', 'Home - FAQs')
             section.faq
                 h2.standart-title standart
                 .faq__container.fixed-container.flex-container
@@ -39,6 +40,5 @@ html(lang="en")
                             <span>Yes</span>
                         label(for="yesN0-2").faq__label 
                             input(type="radio" name="yesNo" id="yesN0-2").faq__input 
-                            <span>No</span>
-                                
+                            <span>No</span>                       
         include ../components/pug-blocks/footer.pug
