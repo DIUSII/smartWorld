@@ -93,23 +93,25 @@ html(lang="en")
                         img(src="pages/homePage/images/pricing-img-1.png", alt="pricing-img-1")
                         h2.pricing__sub-title Standard
                         hr
-                        p.pricing__text 2gb Hosting
-                        p.pricing__text 10 Custom Domain
-                        p.pricing__text SSD Hosting
-                        p.pricing__text 50 gb Bandwith
-                        p.pricing__text Free Support
-                        p.pricing__price $19.00
+                        ul.pricing__items
+                            li.pricing__item 2gb Hosting
+                            li.pricing__item 10 Custom Domain
+                            li.pricing__item SSD Hosting
+                            li.pricing__item 50 gb Bandwith
+                            li.pricing__item Free Support
+                            li.pricing__price $19.00
                         button.blue-btn.pricing__button Try Now
                     .pricing__block
                         img(src="pages/homePage/images/pricing-img-2.png", alt="pricing-img-2")
                         h2.pricing__sub-title Premium
                         hr
-                        p.pricing__text 2gb Hosting
-                        p.pricing__text 10 Custom Domain
-                        p.pricing__text SSD Hosting
-                        p.pricing__text 50 gb Bandwith
-                        p.pricing__text Free Support
-                        p.pricing__price $49.00
+                        ul.pricing__items
+                            li.pricing__item 2gb Hosting
+                            li.pricing__item 10 Custom Domain
+                            li.pricing__item SSD Hosting
+                            li.pricing__item 50 gb Bandwith
+                            li.pricing__item Free Support
+                            li.pricing__price $49.00
                         button.white-btn.pricing__button  Try Now
             section.comments
                 h2.standart-title Standart 
@@ -178,18 +180,23 @@ html(lang="en")
                     <input type="submit" value="SUBSCRIBE" class="subscribe__input-btn">
             section.copyright
                 h2.standart-title Standart
-                .flex-container
-                    .flex-container
-                        .copyright__text.copyright__text_margin © 2018 Copyright, All Rights Reserved by AppSon
-                        .flex-container
-                            .copyright__text.copyright__text_hover Terms & Condition         
-                            .copyright__text.copyright__text_hover Privacy Policy         
-                            .copyright__text.copyright__text_padding Help
-                        .flex-container
+                .fixed-container.flex-container
+                    .copyright__text.copyright__text_margin © 2018 Copyright, All Rights Reserved by AppSon
+                    ul.copyright__items.flex-container
+                        li.copyright__item
+                            p.copyright__text_hover Terms & Condition         
+                        li.copyright__item
+                            p.copyright__text_hover Privacy Policy         
+                        li.copyright__item
+                            p.copyright__text_padding Help
+                    ul.copyright__items.flex-container
+                        li.copyright__item
                             img(src="pages/homePage/images/fb-footer.png", alt="fb-footer").copyright__img
+                        li.copyright__item  
                             img(src="pages/homePage/images/twitter-footer.png", alt="twitter-footer").copyright__img
+                        li.copyright__item
                             img(src="pages/homePage/images/yt-footer.png", alt="yt-footer").copyright__img
-                    a(href="#home").copyright__img-arrow
+                a(href="#home").copyright__img-arrow
         script(src="pages/components/jquery-3.4.1.min.js")
         script(src="pages/homePage/js/homePage.js")
 
