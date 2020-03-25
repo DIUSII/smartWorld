@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+.standart {
+  display: none;
+}
+
 .standart-title {
   display: none;
 }
@@ -44,9 +48,10 @@ body {
 }
 
 .bckg-color {
-  background: url("../images/volna.png") no-repeat;
+  background: url("../images/volna.png") no-repeat center center;
   background-color: #f5fcfd;
   background-size: cover;
+  background-origin: content-box;
 }
 
 .nav-bar {
@@ -190,6 +195,14 @@ body {
 }
 .about__img {
   display: inline-block;
+}
+.about__img_padding-1 {
+  margin-left: -100px;
+  margin-right: 100px;
+}
+.about__img_padding-2 {
+  margin-right: -100px;
+  margin-left: 100px;
 }
 .about__text {
   font-family: "Quicksand", sans-serif;

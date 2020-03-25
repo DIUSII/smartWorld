@@ -1,9 +1,10 @@
 @import '../../components/fonts-and-color';
 @import '../../components/blocks/blocks.scss';
 .bckg-color{
-    background: url("../images/volna.png") no-repeat ;
+    background: url("../images/volna.png") no-repeat center center;
     background-color: #f5fcfd;
     background-size: cover;
+    background-origin:content-box;
 
 }
 .nav-bar{
@@ -137,6 +138,14 @@
     }
     &__img{
         display: inline-block;
+        &_padding-1{
+            margin-left: -100px;
+            margin-right: 100px;
+        } &_padding-2{
+            margin-right: -100px;
+            margin-left: 100px;
+        }
+        
     }
     &__text{
         font-family: $font;

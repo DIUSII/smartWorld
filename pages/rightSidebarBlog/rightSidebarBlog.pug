@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title rightSidebarBlog
         link(rel="stylesheet", href="../../fonts/fonts.css")
         link(rel="stylesheet", href="../rightSidebarBlog/css/rightSidebarBlog.css")
     body
@@ -34,13 +34,57 @@ html(lang="en")
                             label(for="yesN0-"+id).posts__label
                                 input(type="radio" name="yesNo", id="yesN0-"+id).posts__input
                                 span.posts__label-span= text
-                        .posts__cont
-                            +label(1,1)
-                            +label(2,2)
-                            +label(3,3)
-                            +label(4,4)
-                            +label(5,'>')
+                        +label(1,1)
+                        +label(2,2)
+                        +label(3,3)
+                        +label(4,4)
+                        +label(5,'>')
                     aside.posts__side-colomn
-                        input(type="search")
-
-        include ../components/pug-blocks/footer.pug
+                        .posts__search.flex-container
+                            input(type="search" placeholder="Search").posts__search-input
+                            <span class="posts__search-span"></span>
+                        .posts__people
+                            h2.posts__title-people Recent Post
+                            .posts__boxs.flex-container
+                                img(src="images/img-face.jpg", alt="img-face")
+                                .posts__group-text
+                                    h3.posts__title.posts__title_padding-bottom The Master bedroom
+                                    p.posts__text.posts__text_padding-bottom Lorem ipsum dolor sit amet,  icing.
+                            .posts__boxs.flex-container
+                                img(src="images/img-face-2.jpg", alt="img-face")
+                                .posts__group-text
+                                    h3.posts__title.posts__title_padding-bottom The Master bedroom
+                                    p.posts__text.posts__text_padding-bottom Lorem ipsum dolor sit amet,  icing.
+                            .posts__boxs.flex-container
+                                img(src="images/img-face-3.jpg", alt="img-face")
+                                .posts__group-text
+                                    h3.posts__title.posts__title_padding-bottom The Master bedroom
+                                    p.posts__text.posts__text_padding-bottom Lorem ipsum dolor sit amet,  icing.
+                        .posts__catalog
+                            h2.posts__title-people Catagory
+                            .posts__boxs
+                                h3.posts__title.posts__title_padding-bottom Cloud Hosting
+                                hr
+                            .posts__boxs
+                                h3.posts__title.posts__title_padding-bottom Shared Hosting
+                                hr
+                            .posts__boxs
+                                h3.posts__title.posts__title_padding-bottom VPS Hosting
+                                hr
+                            .posts__boxs
+                                h3.posts__title.posts__title_padding-bottom Uncatagorized
+                        .posts__tags
+                            h2.posts__title-people Popular Tags
+                            mixin tags(id,text)
+                                label(for="tags-"+id).posts__label-tags
+                                    input(type="checkbox" name="tags", id="tags-"+id).posts__input-tags
+                                    span.posts__tags-span= text
+                            +tags(1,'Apps')
+                            +tags(2,'Awards')
+                            +tags(3,'Web Template')
+                            +tags(4,'Awards')
+                            +tags(5,'Web Template')
+                            +tags(6,'UI')
+                            +tags(7,'Web Template')
+                            +tags(8,'Awards')
+        include ../components/pug-blocks/footer.pug 
