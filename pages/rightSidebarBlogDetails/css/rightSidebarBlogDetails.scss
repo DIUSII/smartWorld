@@ -1,0 +1,100 @@
+@import '../../components/fonts-and-color';
+@import '../../components/blocks/blocks';
+@import '../../components/blocks/nav-bar';
+@import '../../components/blocks/footer';
+@import '../../components/blocks/cover';
+@import '../../components/blocks/aside';
+.post{
+    padding: 130px 0;
+    &__container{
+        align-items: flex-start;
+    }
+    &__only-one{
+        margin-right: 30px;
+    }
+    &__icon{
+        @include sub-text;
+        margin-bottom: 20px;
+        width: 350px
+    }
+    &__title{
+        font-family: $font;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.25;
+        color: #333333;
+    }
+    &__text{
+        @include sub-text;
+    }
+    &__date{
+        text-align: right;
+        width: 120px;
+        background: url('../images/calendar.png') no-repeat 0 50%;
+        background-size: 15%;
+    }
+    &__comment{
+        text-align: right;
+        width: 40px;
+        background: url('../images/comment.png') no-repeat 0 50%;
+        background-size: 40%;
+    }
+    &__likes{
+        text-align: right;
+        width: 40px;
+        background: url('../images/like.png') no-repeat 0 50%;
+        background-size: 40%;
+        margin-right: 40px;
+    }
+    &__text-comment{
+        margin: 0 0 0 70px;
+        font-family:$font;
+        line-height: 1.69;
+        color: #333333;
+    }
+    &__hr{
+        margin: 40px 0;
+        border: 1px solid whitesmoke;
+    }
+    &__txt{
+        font-family:$font;
+        line-height: 1.69;
+        color: #333333;
+        margin-right: 10px;
+    }
+    &__group-btn{
+        margin-top: 30px;
+        text-align: center;
+    }
+    &__button{
+        padding: 10px 30px;
+
+    }
+    &__btn{
+        margin-left: 30px;
+        padding: 10px 50px;
+    }
+    &__input{
+        width: 45%;
+        border-radius: 5px;
+        border: solid 1px #dcdcdc;
+        padding: 15px 0 15px 20px;
+        margin: 0 0 30px;
+        outline: none;
+        @include sub-text;
+        &::placeholder{
+            @include sub-text;
+        }
+        &_textarea{
+            width: 750px;
+        }
+    }
+    &__content-btn{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__submit{
+        padding: 10px 50px;
+
+    }
+}

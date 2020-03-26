@@ -22,6 +22,10 @@ html(lang="en")
                         li.nav-bar__item
                             a(href="#").nav-bar__link pages
                     button.blue-btn.nav-bar__btn(onClick='location.href="pages/signUp/signUp.html"') sign up
+                .nav-bar__hamburger
+                    hr.nav-bar__hr
+                    hr.nav-bar__hr
+                    hr.nav-bar__hr
             .elements.fixed-container
                 h1.elements__title Best-Desktop-App-for-You
                 p.elements__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -33,7 +37,7 @@ html(lang="en")
         main
             section.features#feat
                 h2.standart-title Standart
-                .fixed-container.flex-container
+                .features__container.fixed-container.flex-container
                     .features__content
                        img(src="pages/homePage/images/img-features-3.png", alt="img-features").features__img
                        h3.features__title Analysis
@@ -42,7 +46,7 @@ html(lang="en")
                        img(src="pages/homePage/images/img-features-2.png", alt="img-features").features__img
                        h3.features__title Clean Design
                        p.features__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    .features__content.features__content_margin-none
+                    .features__content
                        img(src="pages/homePage/images/img-features-1.png", alt="img-features").features__img
                        h3.features__title Messaging
                        p.features__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -66,24 +70,23 @@ html(lang="en")
                 .fixed-container
                     h2.it-works__title How Does It Works?
                     p.it-works__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
-                    img(src="pages/homePage/images/blue-pen.png", alt="blue-pen").it-works__img
                     hr.it-works__hr
-                    img(src="pages/homePage/images/email.png", alt="email").it-works__img
-                    hr.it-works__hr
-                    img(src="pages/homePage/images/tablet.png", alt="tablet").it-works__img
-                    .flex-container
+                    .it-works__container.flex-container
                         .it-works__sub-text
+                            img(src="pages/homePage/images/blue-pen.png", alt="blue-pen").it-works__img
                             h3.it-works__sub-title Create An Account
                             p.it-works__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
                         .it-works__sub-text
+                            img(src="pages/homePage/images/email.png", alt="email").it-works__img
                             h3.it-works__sub-title Confirm Email
                             p.it-works__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
                         .it-works__sub-text
+                            img(src="pages/homePage/images/tablet.png", alt="tablet").it-works__img
                             h3.it-works__sub-title See Results
                             p.it-works__txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
             section.pricing#pric
                 h2.standart-title Standart 
-                .fixed-container.flex-container
+                .pricing__container.fixed-container.flex-container
                     .pricing__content 
                         h2.pricing__title Pricing Plan
                         p.pricing__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
@@ -115,28 +118,29 @@ html(lang="en")
                         button.white-btn.pricing__button  Try Now
             section.comments
                 h2.standart-title Standart 
-                .flex-container
+                .comments__width.flex-container
                     img(src="pages/homePage/images/img-comments.png", alt="img-comments").comments__img
                     .comments__container
                         h2.comments__title Trusted By More Than 55M Peoples
-                        .comments__content
-                            .comments__box.flex-container
-                                h3.comments__sub-title Raisa Moni
-                                img(src="pages/homePage/images/twitter.png", alt="twitter")
-                            p.comments__text Envato Customer
-                            p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
-                        .comments__content
-                            .comments__box.flex-container
-                                h3.comments__sub-title Raisa Moni
-                                img(src="pages/homePage/images/twitter.png", alt="twitter")
-                            p.comments__text Envato Customer
-                            p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
-                        .comments__content
-                            .comments__box.flex-container
-                                h3.comments__sub-title Raisa Moni
-                                img(src="pages/homePage/images/twitter.png", alt="twitter")
-                            p.comments__text Envato Customer
-                            p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
+                        .comments__body
+                            .comments__content
+                                .comments__box.flex-container
+                                    h3.comments__sub-title Raisa Moni
+                                    img(src="pages/homePage/images/twitter.png", alt="twitter")
+                                p.comments__text Envato Customer
+                                p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
+                            .comments__content
+                                .comments__box.flex-container
+                                    h3.comments__sub-title Raisa Moni
+                                    img(src="pages/homePage/images/twitter.png", alt="twitter")
+                                p.comments__text Envato Customer
+                                p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
+                            .comments__content
+                                .comments__box.flex-container
+                                    h3.comments__sub-title Raisa Moni
+                                    img(src="pages/homePage/images/twitter.png", alt="twitter")
+                                p.comments__text Envato Customer
+                                p.comments__sub-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etamet.
             section.latest-news
                 h2.standart-title Standart
                 .fixed-container    
@@ -144,7 +148,7 @@ html(lang="en")
                     p.latest-news__text.latest-news__text_center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.
                     .latest-news__container.flex-container 
                         .latest-news__main-news
-                            img(src="pages/homePage/images/img-main-news.jpg", alt="img-main-news")
+                            img(src="pages/homePage/images/img-main-news.jpg", alt="img-main-news").latest-news__img
                             h3.latest-news__sub-title The master bedroom suite is phenomenally spacious
                             p.latest-news__text.latest-news__text_width Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                             a(href="#").latest-news__link Continue Reading<span class="latest-news__span"></span>
@@ -176,20 +180,21 @@ html(lang="en")
                 h2.standart-title Standart
                 .subscribe__logo
                     <span class = "subscribe__span">AppSon</span>
-                    <input type="email" name="" class="subscribe__input-email" placeholder="Enter Your Email">
-                    <input type="submit" value="SUBSCRIBE" class="subscribe__input-btn">
+                    .subscribe__input
+                        <input type="email" name="" class="subscribe__input-email" placeholder="Enter Your Email">
+                        <input type="submit" value="SUBSCRIBE" class="subscribe__input-btn">
             section.copyright
                 h2.standart-title Standart
-                .fixed-container.flex-container
+                .copyright__container.fixed-container.flex-container
                     .copyright__text.copyright__text_margin © 2018 Copyright, All Rights Reserved by AppSon
-                    ul.copyright__items.flex-container
+                    ul.copyright__items.flex-container.copyright__info
                         li.copyright__item
                             p.copyright__text_hover Terms & Condition         
                         li.copyright__item
                             p.copyright__text_hover Privacy Policy         
                         li.copyright__item
                             p.copyright__text_padding Help
-                    ul.copyright__items.flex-container
+                    ul.copyright__items.flex-container.copyright__hello
                         li.copyright__item
                             img(src="pages/homePage/images/fb-footer.png", alt="fb-footer").copyright__img
                         li.copyright__item  

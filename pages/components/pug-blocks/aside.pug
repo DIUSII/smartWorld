@@ -1,0 +1,48 @@
+aside.side
+    .side__search.flex-container
+        input(type="search" placeholder="Search").side__input
+        <span class="side__span"></span>
+    .side__people
+        h2.side__main-title Recent Post
+        .side__boxs.flex-container
+            img(src="images/img-face-1.jpg", alt="img-face")
+            .side__group-text
+                h3.side__title.side__title_padding-bottom The Master bedroom
+                p.side__text.side__text_padding-bottom Lorem ipsum dolor sit amet,  icing.
+        .side__boxs.flex-container
+            img(src="images/img-face-2.jpg", alt="img-face")
+            .side__group-text
+                h3.side__title.side__title_padding-bottom The Master bedroom
+                p.side__text.side__text_padding-bottom Lorem ipsum dolor sit amet,  icing.
+        .side__boxs.flex-container
+            img(src="images/img-face-3.jpg", alt="img-face")
+            .side__group-text
+                h3.side__title.side__title_padding-bottom The Master bedroom
+                p.side__text.side__text_padding-bottom Lorem ipsum dolor sit amet,  icing.
+    .side__catalog
+        h2.side__main-title Catagory
+        .side__boxs
+            h3.side__title.side__title_padding-bottom Cloud Hosting
+            hr
+        .side__boxs
+            h3.side__title.side__title_padding-bottom Shared Hosting
+            hr
+        .side__boxs
+            h3.side__title.side__title_padding-bottom VPS Hosting
+            hr
+        .side__boxs
+            h3.side__title.side__title_padding-bottom Uncatagorized
+    .side__tags
+        h2.side__main-title Popular Tags
+        mixin tags(id,text)
+            label(for="tags-"+id).side__label-tags
+                input(type="checkbox" name="tags", id="tags-"+id).side__input-tags
+                span.side__tags-span= text
+        +tags(1,'Apps')
+        +tags(2,'Awards')
+        +tags(3,'Web Template')
+        +tags(4,'Awards')
+        +tags(5,'Web Template')
+        +tags(6,'UI')
+        +tags(7,'Web Template')
+        +tags(8,'Awards')
