@@ -4,7 +4,7 @@
 @import '../../components/blocks/footer';
 @import '../../components/blocks/cover';
 .faq{
-    padding: 130px;
+    padding: 130px 20px;
     &__container{
         align-items: flex-start;
     }
@@ -14,16 +14,17 @@
         list-style: none;
     }
     &__item{
-        display: block;
-        width: 360px;
+        display: inline-block;
+        width: 80%;
+        max-width: 360px;
         font-family: $font;
         font-size: 18px;
         font-weight: 500;
         line-height: 1.5;
         padding: 18px 0 18px 30px;
         border: 1px solid #dcdcdc;
-        border-radius: 4px;
         margin-right: 100px;
+        border-radius: 4px;
         transition: 1s;
         &:hover{
             color: #fff;
@@ -76,4 +77,57 @@
         }
     }
 }
+@media (max-width: 1100px){
+    .faq{
+        padding: 50px 20px;
+        &__container{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__blocks{
+            margin-bottom: 50px;
+        }
+        &__answers{
+            width: 70%;
+        }
+        &__title{
+            display: inline-block;
+        }
+        &__text{
+            // width: 100%;
+            display: inline-block;
+        }
+        &__item{
+            margin-right: 30px;
+        }
+    }
+}
 
+@media (max-width: 870px){
+    .faq{
+        &__item{
+            width: 100%;
+            padding-left: 0;
+            max-width: 870px;
+            text-align: center;
+            margin-right: 0;
+        }
+    }
+}
+@media (max-width: 700px){
+    .faq{
+        &__answers{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 550px){
+    .faq{
+        &__text{
+            width: 100%;
+        }
+    }
+    .faq__label {
+        margin-left: 0;
+    }
+}

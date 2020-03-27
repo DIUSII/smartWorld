@@ -5,9 +5,11 @@
 @import '../../components/blocks/cover';
 @import '../../components/blocks/aside';
 .posts{
-    padding: 130px;
+    padding: 130px 20px;
     &__container{
         align-items: flex-start;
+        max-width: 1148px;
+        margin: 0 auto;
     }
     &__content{
         margin-right: 30px;
@@ -117,6 +119,37 @@
         .posts__label-span{         
             border-bottom-right-radius: 4px;
             border-top-right-radius: 4px;
+        }
+    }
+}
+@media (max-width:1200px){
+    .posts{
+        padding: 50px 20px;
+        &__container{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__content{
+            margin: 0;
+        }
+    }
+}
+@media (max-width:790px){
+    .posts{
+        &__box{
+            display: block;
+            width: 100%;
+            max-width: 360px;
+        }
+        &__group-text{
+            padding:15px 20px;
+        }
+        &__img{
+            width: 100%;
+            height: auto;
+        }
+        &__likes{
+            margin: 0;
         }
     }
 }

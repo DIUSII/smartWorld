@@ -15,7 +15,7 @@ html(lang="en")
                 h2.standart-title standart
                 .post__container.flex-container.fixed-container
                     .post__only-one
-                        img(src="images/study.jpg", alt="study")
+                        img(src="images/study.jpg", alt="study").post__img
                         h2.post__title The master bedroom suite is phenomenally spacious
                         .post__icon.flex-container
                             .post__date 16 June, 2018
@@ -41,7 +41,7 @@ html(lang="en")
                         .flex-container
                             input(type="text" placeholder="Enter Name").post__input
                             input(type="email" placeholder="Enter Email").post__input
-                        textarea( placeholder="Enter Comment" rows="7").post__input.post__input_textarea
+                        textarea( placeholder="Enter Comment" rows="7" cols="71").post__input.post__input_textarea
                         .post__content-btn
                             button.blue-btn.post__submit Sumbit
                     include ../components/pug-blocks/aside.pug

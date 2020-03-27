@@ -12,11 +12,11 @@ html(lang="en")
             include ../components/pug-blocks/cover.pug
             +text('Latest Info', 'Our Blog Post', 'Home - Right Side Bar Blog')
             section.posts
-                .posts__container.fixed-container.flex-container
+                .posts__container.flex-container
                     .posts__content
                         mixin img(img)
                             .posts__box.flex-container
-                                img(src="images/"+img, alt="img-post-1")
+                                img(src="images/"+img, alt="img-post-1").posts__img
                                 .posts__group-text
                                     h3.posts__title The master bedroom suite is spaci of 
                                     .posts__icon.flex-container

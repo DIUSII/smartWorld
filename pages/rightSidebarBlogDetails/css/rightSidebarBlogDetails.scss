@@ -5,17 +5,26 @@
 @import '../../components/blocks/cover';
 @import '../../components/blocks/aside';
 .post{
-    padding: 130px 0;
+    padding: 130px 20px;
     &__container{
         align-items: flex-start;
+        max-width: 1148px;
+        margin: 0 auto;
     }
     &__only-one{
         margin-right: 30px;
+        width: 100%;
+        max-width: 750px;
     }
     &__icon{
         @include sub-text;
         margin-bottom: 20px;
-        width: 350px
+        width: 100%;
+        max-width: 350px
+    }
+    &__img{
+        width: 100%;
+        height: auto;
     }
     &__title{
         font-family: $font;
@@ -45,6 +54,7 @@
         background: url('../images/like.png') no-repeat 0 50%;
         background-size: 40%;
         margin-right: 40px;
+        
     }
     &__text-comment{
         margin: 0 0 0 70px;
@@ -78,15 +88,19 @@
         width: 45%;
         border-radius: 5px;
         border: solid 1px #dcdcdc;
-        padding: 15px 0 15px 20px;
         margin: 0 0 30px;
         outline: none;
+        padding: 15px 0 15px 20px;
         @include sub-text;
         &::placeholder{
             @include sub-text;
+            padding-left: -20px;
         }
-        &_textarea{
-            width: 750px;
+        &_textarea{ 
+            resize: none;
+            width: 100%;
+            max-width: 730px;
+
         }
     }
     &__content-btn{
@@ -96,5 +110,43 @@
     &__submit{
         padding: 10px 50px;
 
+    }
+}
+@media (max-width:1250px){
+    .post{
+        padding: 50px 20px;
+        &__container{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__only-one{
+            margin-right: 0;
+        }
+    }
+}
+@media (max-width:800px){
+    .post{
+        &__input{
+            width: 42%;
+            &_textarea{     
+            width: 96%;
+
+            }
+        }
+    }   
+}
+@media (max-width:410px){
+    .post{
+        &__btn{
+            display: block;
+            margin: 30px auto;
+        }
+        &__input{
+            width: 41%;
+            &_textarea{     
+            width: 92%;
+
+            }
+        }
     }
 }

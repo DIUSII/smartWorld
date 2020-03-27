@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+.standart {
+  display: none;
+}
+
 .standart-title {
   display: none;
 }
@@ -37,7 +41,7 @@ body {
   color: #0f7bff;
   font-weight: bold;
   border-radius: 25px;
-  border: solid 2px #0f7bff;
+  border: solid 1px #0f7bff;
   background-color: transparent;
   outline: none;
   cursor: pointer;
@@ -45,10 +49,6 @@ body {
 
 .bckg-color {
   background-color: #f5fcfd;
-}
-
-.standart {
-  display: none;
 }
 
 .nav-bar {
@@ -88,95 +88,37 @@ body {
 .nav-bar__link:hover {
   color: #0f7bff;
 }
+.nav-bar__hamburger {
+  display: none;
+}
 .nav-bar__btn {
+  margin-right: 20px;
   padding: 10px 52px;
   margin-left: 30px;
 }
 
-.sign-in {
-  text-align: center;
-  padding: 130px;
+@media (max-width: 778px) {
+  .nav-bar__span {
+    font-size: 25px;
+  }
+  .nav-bar__content {
+    display: none;
+  }
+  .nav-bar__hamburger {
+    display: inline-block;
+  }
+  .nav-bar__hr {
+    border: 2px solid #0f7bff;
+    width: 50px;
+    margin-bottom: 5px;
+  }
+  .nav-bar__hr {
+    margin-bottom: 0;
+  }
 }
-.sign-in__title {
-  font-family: "Quicksand", sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 1.13;
-  color: #333333;
-}
-.sign-in__text {
-  font-family: "Quicksand", sans-serif;
-  line-height: 1.69;
-  color: #929292;
-}
-.sign-in__text_padding {
-  margin-bottom: 47px;
-}
-.sign-in__btn-fb {
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  line-height: 1.69;
-  color: #ffffff;
-  border: 0;
-  border-radius: 5px;
-  background-color: #3b5999;
-  padding: 10px 36px;
-}
-.sign-in__btn-twitter {
-  margin-left: 30px;
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  line-height: 1.69;
-  color: #ffffff;
-  border: 0;
-  border-radius: 5px;
-  background-color: #55acee;
-  padding: 10px 47px;
-}
-.sign-in__sub-title {
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #333333;
-  margin: 50px 0;
-}
-.sign-in__input {
-  display: block;
-  width: 300px;
-  border-radius: 5px;
-  border: solid 1px #dcdcdc;
-  padding: 15px 0 15px 20px;
-  margin: 0 auto 30px;
-  outline: none;
-  font-family: "Quicksand", sans-serif;
-  line-height: 1.69;
-  color: #929292;
-}
-.sign-in__input::placeholder {
-  font-family: "Quicksand", sans-serif;
-  line-height: 1.69;
-  color: #929292;
-}
-.sign-in__link {
-  font-family: "Quicksand", sans-serif;
-  font-size: 12px;
-  line-height: 2.25;
-  color: #0f7bff;
-  text-decoration: none;
-}
-.sign-in__btn {
-  margin-top: 30px;
-  padding: 10px 37px;
-}
-.sign-in__box {
-  width: 310px;
-  margin: 0 auto;
-}
-
 .all-info {
   background-color: #f5fcfd;
-  padding: 130px 0;
+  padding: 130px 20px;
   border-bottom: 1px solid #FFF;
 }
 .all-info__container {
@@ -230,7 +172,7 @@ body {
   font-family: "Quicksand", sans-serif;
   line-height: 1.69;
   color: #929292;
-  width: 400px;
+  max-width: 400px;
   margin-top: 33px;
 }
 .all-info__sub-title {
@@ -260,17 +202,31 @@ body {
 .all-info__link:hover {
   color: #0f7bff;
 }
+.all-info__menu {
+  margin-right: 30px;
+}
 
+@media (max-width: 758px) {
+  .all-info {
+    padding: 50px 20px;
+  }
+  .all-info__container {
+    flex-wrap: wrap;
+  }
+  .all-info__menu {
+    margin-top: 30px;
+  }
+}
 .coperyght {
   position: relative;
   background-color: #f5fcfd;
-  padding: 41px 0;
+  padding: 41px 20px;
 }
 .coperyght__text {
-  margin-right: 19%;
   font-family: "Quicksand", sans-serif;
   line-height: 1.69;
   color: #929292;
+  margin-right: 30px;
 }
 .coperyght__items {
   margin: 0;
@@ -305,6 +261,127 @@ body {
   position: absolute;
   top: 32.5%;
   right: 10%;
+}
+
+@media (max-width: 1530px) {
+  .coperyght__footer-arrow {
+    right: 2%;
+  }
+  .coperyght__container {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 900px) {
+  .coperyght__container {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .coperyght__footer-arrow {
+    top: 50%;
+  }
+  .coperyght__items {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .coperyght__item {
+    display: block;
+  }
+  .coperyght__container {
+    justify-content: flex-start;
+  }
+}
+.sign-in {
+  text-align: center;
+  padding: 130px 20px;
+}
+.sign-in__title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.13;
+  color: #333333;
+}
+.sign-in__text {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.69;
+  color: #929292;
+}
+.sign-in__text_padding {
+  margin-bottom: 47px;
+}
+.sign-in__btn-fb {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  line-height: 1.69;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  background-color: #3b5999;
+  padding: 10px 36px;
+}
+.sign-in__btn-twitter {
+  margin-left: 30px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  line-height: 1.69;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  background-color: #55acee;
+  padding: 10px 47px;
+}
+.sign-in__sub-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #333333;
+  margin: 50px 0;
+}
+.sign-in__input {
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: solid 1px #dcdcdc;
+  padding: 15px 0 15px 20px;
+  margin: 0 auto 30px;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.69;
+  color: #929292;
+}
+.sign-in__input::placeholder {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.69;
+  color: #929292;
+}
+.sign-in__link {
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  line-height: 2.25;
+  color: #0f7bff;
+  text-decoration: none;
+}
+.sign-in__btn {
+  margin-top: 30px;
+  padding: 10px 37px;
+}
+.sign-in__box {
+  width: 80%;
+  max-width: 310px;
+  margin: 0 auto;
+}
+
+@media (max-width: 370px) {
+  .sign-in__btn-twitter {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  .sign-in__box {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=signIn.css.map */

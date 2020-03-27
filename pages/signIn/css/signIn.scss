@@ -4,7 +4,7 @@
 @import '../../components/blocks/footer';
 .sign-in{
     text-align: center;
-    padding: 130px;
+    padding: 130px 20px;
     &__title{
         @include title;
     }
@@ -41,7 +41,8 @@
     }
     &__input{
         display:block;
-        width: 300px;
+        width: 80%;
+        max-width: 300px;
         border-radius: 5px;
         border: solid 1px #dcdcdc;
         padding: 15px 0 15px 20px;
@@ -65,7 +66,19 @@
         
     }
     &__box{
-     width: 310px;
-     margin: 0 auto;
+        width: 80%;
+        max-width: 310px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 370px){
+    .sign-in{
+        &__btn-twitter{
+            margin-top: 30px;
+            margin-left: 0;
+        }
+        &__box{
+            flex-direction: column;
+        }
     }
 }

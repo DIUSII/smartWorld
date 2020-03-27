@@ -3,8 +3,9 @@
 @import '../../components/blocks/nav-bar';
 @import '../../components/blocks/footer';
 .sign-up{
+    
     text-align: center;
-    padding: 130px;
+    padding: 130px 20px;
     &__title{
         @include title;
     }
@@ -41,7 +42,8 @@
     }
     &__input{
         display:block;
-        width: 300px;
+        width: 80%;
+        max-width: 300px;
         border-radius: 5px;
         border: solid 1px #dcdcdc;
         padding: 15px 0 15px 20px;
@@ -60,5 +62,13 @@
         margin-top: 15px;
         padding: 10px 37px;
         
+    }
+}
+@media (max-width: 370px){
+    .sign-up{
+        &__btn-twitter{
+            margin-top: 30px;
+            margin-left: 0;
+        }
     }
 }
